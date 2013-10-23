@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title></title>
+</head>
+<body>
+<form>
+    <div id="1">
+        <div class="devraag">
+            <label>Naam:
+                <br><input type="text">
+            </label>
+            <br>
+            <label>Reeks:
+                <br><input type="number">
+            </label>
+            <br>
+
+        </div>
+        <div class="controls">
+            <img class="right" src="right.png" onclick="goRight(1)"/>
+        </div>
+    </div>
+    <div id="2" hidden>
+        <div class="devraag">
+            <label>Ik vond het (concept van het) seminarie in het algemeen goed:<br></label>
+            <input type="radio" name="concept" value="1"/>1
+            <input type="radio" name="concept" value="2"/>2
+            <input type="radio" name="concept" value="3"/>3
+            <input type="radio" name="concept" value="4"/>4
+            <input type="radio" name="concept" value="5"/>5<br>
+            <textarea id="concept"></textarea>
+            <br>
+        </div>
+        <div class="controls">
+            <img class="left" src="left.png" onclick="goLeft(2)"/>
+            <img class="right" src="right.png" onclick="goRight(2)"/>
+        </div>
+    </div>
+    <div id="3" hidden>
+        <div class="devraag">
+            <label>Ik vond de spreker goed:<br>
+            </label>
+            <input type="radio" name="spreker" value="1"/>1
+            <input type="radio" name="spreker" value="2"/>2
+            <input type="radio" name="spreker" value="3"/>3
+            <input type="radio" name="spreker" value="4"/>4
+            <input type="radio" name="spreker" value="5"/>5<br>
+            <textarea id="spreker"></textarea>
+        </div>
+        <div class="controls">
+            <img class="left"src="left.png" onclick="goLeft(3)"/>
+            <img class="right" src="right.png" onclick="goRight(3)"/>
+        </div>
+    </div>
+    <div id="4" hidden>
+        <div class="devraag">
+            <label>Ik vond de inhoud boeiend:<br>
+            </label>
+            <input type="radio" name="inhoud" value="1"/>1
+            <input type="radio" name="inhoud" value="2"/>2
+            <input type="radio" name="inhoud" value="3"/>3
+            <input type="radio" name="inhoud" value="4"/>4
+            <input type="radio" name="inhoud" value="5"/>5<br>
+            <textarea id="inhoud"></textarea>
+        </div>
+        <div class="controls">
+            <img class="left" src="left.png" onclick="goLeft(4)"/>
+            <img class="right" src="right.png" onclick="goRight(4)"/>
+        </div>
+    </div>
+    <div id="5" hidden>
+        <div class="devraag">
+            <label>Hoeveel heb je gemerkt van de (social) mediacampagne van je medestudenten?<br>
+                Beschrijf wat - hoe - wie (1 niets gemerkt -> 5 zeer opgemerkte campagne): <br>
+            </label>
+            <input type="radio" name="campagne" value="1"/>1
+            <input type="radio" name="campagne" value="2"/>2
+            <input type="radio" name="campagne" value="3"/>3
+            <input type="radio" name="campagne" value="4"/>4
+            <input type="radio" name="campagne" value="5"/>5<br>
+            <textarea id="campagne"></textarea>
+        </div>
+        <div class="controls">
+            <img class="left" src="left.png" onclick="goLeft(5)"/>
+            <img class="right" src="right.png" onclick="goRight(5)"/>
+        </div>
+    </div>
+    <div id="6" hidden>
+        <div class="devraag">
+            <label>Dit leerde ik bij/dit verbaasde mij/overige opmerkingen:<br>
+                <textarea id="verbasing">
+                </textarea>
+            </label>
+            <br>
+            <label>Hoe gebruik jij in je dagelijks leven de 'cloud'?<br>
+                <textarea id="cloud"></textarea>
+            </label>
+            <br>
+        </div>
+        <div class="controls">
+            <img class="left" src="left.png" onclick="goLeft(6)"/>
+            <input class="btn right" type="submit" value="Verzenden"/>
+        </div>
+    </div>
+</form>
+<script>
+    function goLeft(current){
+        document.getElementById(current).setAttribute("hidden", "hidden");
+        document.getElementById(current-1).removeAttribute("hidden");
+
+    }
+    function goRight(current){
+        document.getElementById(current).setAttribute("hidden", "hidden");
+        document.getElementById(current+1).removeAttribute("hidden");
+    }
+</script>
+</body>
+</html>
