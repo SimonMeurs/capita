@@ -131,6 +131,13 @@
         clear("errors");
         if(!doPost()){
             toonError();
+        } else {
+            errors.appendChild(createLI("Je evaluatie is verzonden!"));
+            document.getElementById("errorMessage").removeAttribute("hidden");
+
+            document.getElementById("errorMessage").id = "succesMessage"
+            document.getElementById("verzendknop").setAttribute("disabled", "disabled");
+            document.getElementById("verzendknop").setAttribute("class", "disabledknop")
         }
     }
     function createLI(text){
@@ -253,7 +260,6 @@
         }
         return ingevuld;
     }
-
 
     function redirect(){
         if (xmlhttp.readystate == 4 && xmlhttp.status == 200) {
