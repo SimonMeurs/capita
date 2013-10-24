@@ -17,11 +17,6 @@ function submitForm(){
     clear("errors");
     if(!doPost()){
         toonError();
-    } else {
-        clear("container");
-        var h1 = document.createElement("h1");
-        h1.appendChild(document.createTextNode("Je evaluatie is verzonden!"));
-        document.getElementById("container").appendChild(h1);
     }
 }
 function createLI(text){
@@ -146,12 +141,11 @@ function doPost(){
 }
 
 function redirect(){
-    if (login_xHRObject.readystate == 4 && login_xHRObject.status == 200) {
-        errors.appendChild(createLI("Je evaluatie is verzonden!"));
-        document.getElementById("errorMessage").removeAttribute("hidden");
-
-        document.getElementById("errorMessage").id = "succesMessage"
-        document.getElementById("verzendknop").setAttribute("disabled", "disabled");
+    document.getElementById("6").setAttribute("hidden", "hidden");
+    if (login_xHRObject.readyState == 4 && login_xHRObject.status == 200) {
+        var h1 = document.createElement("h1");
+        h1.appendChild(document.createTextNode("Je evaluatie is verzonden!"));
+        document.getElementById("container").appendChild(h1);
     }
 }
 function errorMessage(){
