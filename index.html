@@ -2,10 +2,11 @@
 <html>
 <head>
     <link href="style.css" rel="stylesheet">
-    <access origin="http://likeit.bugs3.com/" />
+    <access origin="*" />
     <title>Evaluatie</title>
 </head>
 <body>
+<access origin="*" />
     <div id="1" class="cont">
         <div class="devraag">
             <label>Naam:
@@ -108,7 +109,7 @@
         </div>
         <div class="controls">
             <img class="left" src="left.png" onclick="goLeft(6)"/>
-            <input class="btn right" type="submit" value="Verzenden" onclick="submitForm()"/>
+            <input id="verzendknop" class="btn right" type="submit" value="Verzenden" onclick="submitForm()"/>
         </div>
     </div>
 <script>
@@ -252,10 +253,13 @@
     }
     var login_xHRObject = new XMLHttpRequest();
     function redirect(){
-        window.location = "succes.html"
+        errors.appendChild(createLI("Je evaluatie is verzonden!"));
+        document.getElementById("errorMessage").removeAttribute("hidden");
+
+        document.getElementById("errorMessage").id = "succesMessage"
+        document.getElementById("verzendknop").setAttribute("disabled", "disabled");
     }
     function errorMessage(){
-
         document.getElementById("errorMessage").removeAttribute("hidden");
     }
     function goLeft(current){

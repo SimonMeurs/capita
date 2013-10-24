@@ -28,7 +28,10 @@ body {
 #errorMessage {
     padding-top: 10px;
     color: red;
-
+}
+#succesMessage {
+    padding-top: 10px;
+    color: green;
 }
 textarea {
     width: 100%;
