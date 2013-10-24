@@ -2,9 +2,13 @@ body {
     font-family: Arial;
     background-image: url("background.jpg");
 }
-div {
-    width: 100%;
-    font-size: 100%;
+.devraag {
+    padding: 2%;
+}
+.cont {
+    padding: 10px;
+    background-color: #e6e6e6;
+    border-radius: 20px;
 }
 .left {
     float: left;
@@ -21,7 +25,11 @@ div {
     position: fixed;
     right: 0;
 }
+#errorMessage {
+    padding-top: 10px;
+    color: red;
 
+}
 textarea {
     width: 100%;
     resize: none;
