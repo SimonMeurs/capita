@@ -146,7 +146,7 @@ function doPost(){
 }
 
 function redirect(){
-    if (xmlhttp.readystate == 4 && xmlhttp.status == 200) {
+    if (xmlhttp.login_xHRObject == 4 && login_xHRObject.status == 200) {
         errors.appendChild(createLI("Je evaluatie is verzonden!"));
         document.getElementById("errorMessage").removeAttribute("hidden");
 
