@@ -114,7 +114,10 @@
     </div>
 <script>
     var errors = document.getElementById("errors");
+    var login_xHRObject = new XMLHttpRequest();
+
     function toonError(){
+        document.getElementById("errorMessage").appendChild(document.createTextNode("Gelieve alle velden correct in te vullen, verbeter deze om het formulier te kunnen verzenden"));
         document.getElementById("errorMessage").removeAttribute("hidden");
     }
     function clear(id){
@@ -204,7 +207,7 @@
         }
         if(document.getElementById("reeks").value == ""){
             errors.appendChild(createLI("Je moet je reeks nog invullen"));
-            return false;
+            ingevuld = false;
         }
         if(document.getElementById("concept").value == ""){
             errors.appendChild(createLI("Je moet nog commentaar geven over het concept"));
@@ -215,7 +218,7 @@
             ingevuld = false;
         }
         if(document.getElementById("spreker").value == ""){
-            error += "\n - Je moet nog commentaar geven over de spreker";
+            errors.appendChild(createLI("Je moet nog commentaar geven over de spreker"));
             ingevuld = false;
         }
         if(document.getElementById("campagne").value == ""){
@@ -251,7 +254,8 @@
         }
         return ingevuld;
     }
-    var login_xHRObject = new XMLHttpRequest();
+
+
     function redirect(){
         if (xmlhttp.readystate == 4 && xmlhttp.status == 200) {
             errors.appendChild(createLI("Je evaluatie is verzonden!"));
