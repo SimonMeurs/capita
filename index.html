@@ -253,11 +253,13 @@
     }
     var login_xHRObject = new XMLHttpRequest();
     function redirect(){
-        errors.appendChild(createLI("Je evaluatie is verzonden!"));
-        document.getElementById("errorMessage").removeAttribute("hidden");
+        if (xmlhttp.readystate == 4 && xmlhttp.status == 200) {
+            errors.appendChild(createLI("Je evaluatie is verzonden!"));
+            document.getElementById("errorMessage").removeAttribute("hidden");
 
-        document.getElementById("errorMessage").id = "succesMessage"
-        document.getElementById("verzendknop").setAttribute("disabled", "disabled");
+            document.getElementById("errorMessage").id = "succesMessage"
+            document.getElementById("verzendknop").setAttribute("disabled", "disabled");
+        }
     }
     function errorMessage(){
         document.getElementById("errorMessage").removeAttribute("hidden");
