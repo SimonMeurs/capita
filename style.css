@@ -16,6 +16,10 @@ body {
 .right {
     float: right;
 }
+.arrow {
+    max-height: 20%;
+    max-width: 30%;
+}
 .controls {
     min-height: 40px;
     position: fixed;

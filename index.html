@@ -7,117 +7,116 @@
 </head>
 <body>
 <access origin="*" />
-    <div id="1" class="cont">
-        <div class="devraag">
-            <label>Naam:
-                <br><input id="naam" type="text" required>
-            </label>
-            <br>
-            <label>Reeks:
-                <br><input id="reeks" type="number" required>
-            </label>
-            <br>
+<div id="1" class="cont">
+    <div class="devraag">
+        <label>Naam:
+            <br><input id="naam" type="text" required>
+        </label>
+        <br>
+        <label>Reeks:
+            <br><input id="reeks" type="number" required>
+        </label>
+        <br>
 
-        </div>
-        <div class="controls">
-            <img class="right" src="right.png" onclick="goRight(1)"/>
-        </div>
     </div>
-    <div id="2" class="cont" hidden>
-        <div class="devraag">
-            <label>Ik vond het (concept van het) seminarie in het algemeen goed:<br></label>
-            <input type="radio" id="concept1" name="concept" value="1" />1
-            <input type="radio" id="concept2" name="concept" value="2" />2
-            <input type="radio" id="concept3" name="concept" value="3" />3
-            <input type="radio" id="concept4" name="concept" value="4" />4
-            <input type="radio" id="concept5" name="concept" value="5" />5<br>
-            <textarea id="concept" required></textarea>
-            <br>
-        </div>
-        <div class="controls">
-            <img class="left" src="left.png" onclick="goLeft(2)"/>
-            <img class="right" src="right.png" onclick="goRight(2)"/>
-        </div>
+    <div class="controls">
+        <img class="arrow right" src="right.png" onclick="goRight(1)"/>
     </div>
-    <div id="3" class="cont" hidden>
-        <div class="devraag">
-            <label>Ik vond de spreker goed:<br>
-            </label>
-            <input type="radio"  id="spreker1" name="spreker" value="1" />1
-            <input type="radio"  id="spreker2" name="spreker" value="2" />2
-            <input type="radio"  id="spreker3" name="spreker" value="3" />3
-            <input type="radio"  id="spreker4" name="spreker" value="4" />4
-            <input type="radio"  id="spreker5" name="spreker" value="5"/>5<br>
-            <textarea id="spreker" required></textarea>
-        </div>
-        <div class="controls">
-            <img class="left"src="left.png" onclick="goLeft(3)"/>
-            <img class="right" src="right.png" onclick="goRight(3)"/>
-        </div>
+</div>
+<div id="2" class="cont" hidden>
+    <div class="devraag">
+        <label>Ik vond het (concept van het) seminarie in het algemeen goed:<br></label>
+        <input type="radio" id="concept1" name="concept" value="1" />1
+        <input type="radio" id="concept2" name="concept" value="2" />2
+        <input type="radio" id="concept3" name="concept" value="3" />3
+        <input type="radio" id="concept4" name="concept" value="4" />4
+        <input type="radio" id="concept5" name="concept" value="5" />5<br>
+        <textarea id="concept" required></textarea>
+        <br>
     </div>
-    <div id="4" class="cont" hidden>
-        <div class="devraag">
-            <label>Ik vond de inhoud boeiend:<br>
-            </label>
-            <input type="radio"  id="inhoud1" name="inhoud" value="1"/>1
-            <input type="radio"  id="inhoud2" name="inhoud" value="2"/>2
-            <input type="radio"  id="inhoud3" name="inhoud" value="3"/>3
-            <input type="radio"  id="inhoud4" name="inhoud" value="4"/>4
-            <input type="radio"  id="inhoud5" name="inhoud" value="5"/>5<br>
-            <textarea id="inhoud" required></textarea>
-        </div>
-        <div class="controls">
-            <img class="left" src="left.png" onclick="goLeft(4)"/>
-            <img class="right" src="right.png" onclick="goRight(4)"/>
-        </div>
+    <div class="controls">
+        <img class="arrow left" src="left.png" onclick="goLeft(2)"/>
+        <img class="arrow right" src="right.png" onclick="goRight(2)"/>
     </div>
-    <div id="5" class="cont" hidden>
-        <div class="devraag">
-            <label>Hoeveel heb je gemerkt van de (social) mediacampagne van je medestudenten?<br>
-                Beschrijf wat - hoe - wie (1 niets gemerkt -> 5 zeer opgemerkte campagne): <br>
-            </label>
-            <input type="radio"  id="campagne1" name="campagne" value="1"/>1
-            <input type="radio"  id="campagne2" name="campagne" value="2"/>2
-            <input type="radio"  id="campagne3" name="campagne" value="3"/>3
-            <input type="radio"  id="campagne4" name="campagne" value="4"/>4
-            <input type="radio"  id="campagne5" name="campagne" value="5"/>5<br>
-            <textarea id="campagne" required></textarea>
-        </div>
-        <div class="controls">
-            <img class="left" src="left.png" onclick="goLeft(5)"/>
-            <img class="right" src="right.png" onclick="goRight(5)"/>
-        </div>
+</div>
+<div id="3" class="cont" hidden>
+    <div class="devraag">
+        <label>Ik vond de spreker goed:<br>
+        </label>
+        <input type="radio"  id="spreker1" name="spreker" value="1" />1
+        <input type="radio"  id="spreker2" name="spreker" value="2" />2
+        <input type="radio"  id="spreker3" name="spreker" value="3" />3
+        <input type="radio"  id="spreker4" name="spreker" value="4" />4
+        <input type="radio"  id="spreker5" name="spreker" value="5"/>5<br>
+        <textarea id="spreker" required></textarea>
     </div>
-    <div id="6" class="cont" hidden>
-        <div class="devraag">
-            <label>Dit leerde ik bij/dit verbaasde mij/overige opmerkingen:<br>
-                <textarea id="verbasing" required></textarea>
-            </label>
-            <br>
-            <br>
-            <br>
-            <label>Hoe gebruik jij in je dagelijks leven de 'cloud'?<br>
-                <textarea id="cloud" required></textarea>
-            </label>
-            <br>
-            <div id="errorMessage" hidden>
-                <p>Gelieve alle velden correct in te vullen, verbeter deze om het formulier te kunnen verzenden</P>
-                <ul id="errors">
+    <div class="controls">
+        <img class="arrow left"src="left.png" onclick="goLeft(3)"/>
+        <img class="arrow right" src="right.png" onclick="goRight(3)"/>
+    </div>
+</div>
+<div id="4" class="cont" hidden>
+    <div class="devraag">
+        <label>Ik vond de inhoud boeiend:<br>
+        </label>
+        <input type="radio"  id="inhoud1" name="inhoud" value="1"/>1
+        <input type="radio"  id="inhoud2" name="inhoud" value="2"/>2
+        <input type="radio"  id="inhoud3" name="inhoud" value="3"/>3
+        <input type="radio"  id="inhoud4" name="inhoud" value="4"/>4
+        <input type="radio"  id="inhoud5" name="inhoud" value="5"/>5<br>
+        <textarea id="inhoud" required></textarea>
+    </div>
+    <div class="controls">
+        <img class="arrow left" src="left.png" onclick="goLeft(4)"/>
+        <img class="arrow right" src="right.png" onclick="goRight(4)"/>
+    </div>
+</div>
+<div id="5" class="cont" hidden>
+    <div class="devraag">
+        <label>Hoeveel heb je gemerkt van de (social) mediacampagne van je medestudenten?<br>
+            Beschrijf wat - hoe - wie (1 niets gemerkt -> 5 zeer opgemerkte campagne): <br>
+        </label>
+        <input type="radio"  id="campagne1" name="campagne" value="1"/>1
+        <input type="radio"  id="campagne2" name="campagne" value="2"/>2
+        <input type="radio"  id="campagne3" name="campagne" value="3"/>3
+        <input type="radio"  id="campagne4" name="campagne" value="4"/>4
+        <input type="radio"  id="campagne5" name="campagne" value="5"/>5<br>
+        <textarea id="campagne" required></textarea>
+    </div>
+    <div class="controls">
+        <img class="arrow left" src="left.png" onclick="goLeft(5)"/>
+        <img class="arrow right" src="right.png" onclick="goRight(5)"/>
+    </div>
+</div>
+<div id="6" class="cont" hidden>
+    <div class="devraag">
+        <label>Dit leerde ik bij/dit verbaasde mij/overige opmerkingen:<br>
+            <textarea id="verbasing" required></textarea>
+        </label>
+        <br>
+        <br>
+        <br>
+        <label>Hoe gebruik jij in je dagelijks leven de 'cloud'?<br>
+            <textarea id="cloud" required></textarea>
+        </label>
+        <br>
+        <div id="errorMessage" hidden>
+            <p>Gelieve alle velden correct in te vullen, verbeter deze om het formulier te kunnen verzenden</P>
+            <ul id="errors">
 
-                </ul>
-            </div>
-        </div>
-        <div class="controls">
-            <img class="left" src="left.png" onclick="goLeft(6)"/>
-            <button id="verzendknop" class="btn right" onclick="submitForm()">Verzenden</button>
+            </ul>
         </div>
     </div>
+    <div class="controls">
+        <img class="arrow left" src="left.png" onclick="goLeft(6)"/>
+        <button id="verzendknop" class="btn right" onclick="submitForm()">Verzenden</button>
+    </div>
+</div>
 <script>
     var errors = document.getElementById("errors");
     var login_xHRObject = new XMLHttpRequest();
 
     function toonError(){
-        document.getElementById("errorMessage").appendChild(document.createTextNode("Gelieve alle velden correct in te vullen, verbeter deze om het formulier te kunnen verzenden"));
         document.getElementById("errorMessage").removeAttribute("hidden");
     }
     function clear(id){
